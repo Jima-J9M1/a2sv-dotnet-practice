@@ -1,5 +1,6 @@
-string phrase = "";
-string[] names = phrase.Split(' ');
+Dictionary<string, int> WordFreq (string phrase)
+{
+    string[] names = phrase.Split(' ');
 
 Dictionary<string, int> WordFreq= new Dictionary<string, int>();
 
@@ -14,33 +15,22 @@ foreach(var name in names)
     }
 
 }
-
-foreach(var frq in WordFreq)
-{
-    Console.WriteLine($"Key:{frq.Key}, value:{frq.Value}");
+    return WordFreq;
 }
 
-/*
-void fibonacci(int num){
-    var fibonacci_number = new List<int>{1,1};
-    int indx = 2;
 
-    while(indx < num)
-    {   
-        int fib = fibonacci_number[indx - 1] + fibonacci_number[indx - 2];
-        fibonacci_number.Add(fib);
-        indx += 1;
+
+
+int Main(){
+    Console.WriteLine("Enter a string: ");
+    string str = Console.ReadLine();
+    Dictionary<string, int> resultWordFreq = WordFreq(str);
+
+    foreach(var frq in resultWordFreq)
+    {
+        Console.WriteLine($"Key:{frq.Key}, value:{frq.Value}");
     }
-
-   foreach(var fib_num in fibonacci_number)
-   {
-       Console.Write(fib_num);
-       Console.Write(" ");
-   }
-   
+    return 0;
 }
 
-fibonacci(10);
-
-
-*/
+Main();

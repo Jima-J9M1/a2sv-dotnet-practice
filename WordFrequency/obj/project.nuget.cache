@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZYzOzvhcbEvpvijFG2stTnrYEL21TpYuQ2JLj2UjVGYRtGkFv5kGKETt4JslMwL0oo6VMGu1ZgI+YI2DmunX1w==",
+  "dgSpecHash": "YiVBUel1lEmh7GjUL7ofReQsnEzieugnf069VkttRTklsYSLX/ezB/Kw2Q7DOrEJE+jgssxWPvQeIR8ctRUwog==",
   "success": true,
-  "projectFilePath": "/home/jimd/Desktop/Projects/MyFirstProject/MyFirstProject.csproj",
+  "projectFilePath": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/WordFrequency/MyFirstProject.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

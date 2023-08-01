@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/WordFrequency/MyFirstProject.csproj",
-      "projectName": "MyFirstProject",
-      "projectPath": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/WordFrequency/MyFirstProject.csproj",
+      "projectUniqueName": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentGrade/StudentGrade.csproj",
+      "projectName": "StudentGrade",
+      "projectPath": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentGrade/StudentGrade.csproj",
       "packagesPath": "/home/jimd/.nuget/packages/",
-      "outputPath": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/WordFrequency/obj/",
+      "outputPath": "/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentGrade/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/jimd/.nuget/NuGet/NuGet.Config"
