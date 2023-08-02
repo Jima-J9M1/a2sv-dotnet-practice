@@ -1,0 +1,15 @@
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.csproj.AssemblyReference.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.GeneratedMSBuildEditorConfig.editorconfig
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.AssemblyInfoInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.AssemblyInfo.cs
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.csproj.CoreCompileInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/bin/Debug/net7.0/ShapeHierarchy
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/bin/Debug/net7.0/ShapeHierarchy.deps.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/bin/Debug/net7.0/ShapeHierarchy.runtimeconfig.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/bin/Debug/net7.0/ShapeHierarchy.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/bin/Debug/net7.0/ShapeHierarchy.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/refint/ShapeHierarchy.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ShapeHierarchy.genruntimeconfig.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/ShapeHierarchy/obj/Debug/net7.0/ref/ShapeHierarchy.dll
