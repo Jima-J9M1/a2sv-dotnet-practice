@@ -1,7 +1,16 @@
 ﻿public class Shape
 {
-    public string? Name;
+    private string? Name;
 
+    public Shape(string name)
+    {
+        Name = name;
+    }
+    
+    public string getName()
+    {
+         return Name??"Name";
+    }
     public virtual double CalculateArea()
     {
         return 0;
@@ -13,10 +22,9 @@ public class Circle: Shape
 {
     private double Radius;
     
-    public Circle(string name, double r)
+    public Circle(string name, double r):base(name)
     {
         Radius = r;
-        Name = name;
     }
     public override double CalculateArea()
     {
@@ -29,9 +37,8 @@ public class Rectangle: Shape
     private double Width;
     private double Height;
     
-    public Rectangle(string name, double w, double h)
+    public Rectangle(string name, double w, double h):base(name)
     {
-        Name = name;
         Width = w;
         Height = h;
     }
@@ -47,9 +54,8 @@ public class Triangle: Shape
     private double Base;
     private double Height;
 
-    public Triangle(string name, double b, double h)
+    public Triangle(string name, double b, double h):base(name)
     {
-        Name = name;
         Base = b;
         Height = h;
     }
@@ -66,7 +72,7 @@ public class Program
 
      public static void PrintShapeArea(Shape shape)
     {
-        Console.WriteLine($"Shape: {shape.Name}, Area: {shape.CalculateArea()}");
+        Console.WriteLine($"Shape: {shape.getName()}, Area: {shape.CalculateArea()}");
     }
 
     public static void Main()
