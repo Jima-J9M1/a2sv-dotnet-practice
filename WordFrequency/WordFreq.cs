@@ -23,7 +23,7 @@ foreach(var name in names)
 
 int Main(){
     Console.WriteLine("Enter a string: ");
-    string str = Console.ReadLine();
+    string str = Console.ReadLine()?? "string";
     Dictionary<string, int> resultWordFreq = WordFreq(str);
 
     foreach(var frq in resultWordFreq)

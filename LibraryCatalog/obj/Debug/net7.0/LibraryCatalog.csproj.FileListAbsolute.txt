@@ -1,0 +1,15 @@
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/bin/Debug/net7.0/LibraryCatalog
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/bin/Debug/net7.0/LibraryCatalog.deps.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/bin/Debug/net7.0/LibraryCatalog.runtimeconfig.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/bin/Debug/net7.0/LibraryCatalog.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/bin/Debug/net7.0/LibraryCatalog.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.csproj.AssemblyReference.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.GeneratedMSBuildEditorConfig.editorconfig
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.AssemblyInfoInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.AssemblyInfo.cs
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.csproj.CoreCompileInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/refint/LibraryCatalog.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/LibraryCatalog.genruntimeconfig.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/LibraryCatalog/obj/Debug/net7.0/ref/LibraryCatalog.dll

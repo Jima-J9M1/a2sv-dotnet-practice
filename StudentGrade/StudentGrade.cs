@@ -25,10 +25,11 @@ float averageGrade(int size, Dictionary<string, float> subjectDict)
 void addStudentData()
 {
     Console.Write("Enter student name: ");
-    string name = Console.ReadLine();
+    string name = Console.ReadLine() ?? "StudentName";
     Console.Write("Enter number of subjects: ");
-    int numSubjects = int.Parse(Console.ReadLine());
+    int numSubjects = int.Parse(Console.ReadLine()?? "0");
     Dictionary<string, float> subjectDict = subjectValue(numSubjects);
+
     float avg = averageGrade(numSubjects, subjectDict);
     printStudentData(name, subjectDict, avg);
     
@@ -37,15 +38,16 @@ void addStudentData()
 
 
 void printStudentData(string name, Dictionary<string, float> subjectDict,float avg){
-    console.WriteLine("-------------------------");
+    Console.WriteLine("-------------------------");
     Console.WriteLine("Student name: {0}", name);
+    // Console.WriteLine($"Student name: {name}");
 
 
     // Dictionary<string, float> subjectDict = subjectValue(numSubjects);
 
 
     foreach(KeyValuePair<string, float> grade in subjectDict){
-        Console.WriteLine("Subject: {0}, Grade: {1}", grade.Key, grade.Value);
+        Console.WriteLine("Subject: {9}, Grade: {1}", grade.Key, grade.Value);
     }
 
     Console.WriteLine("Average grade: {0}", avg);
@@ -65,9 +67,10 @@ Dictionary<string, float> subjectValue(int size)
     int indx = 0;
     while(indx < size){
         Console.Write("Enter subject name:");
-        string subject = Console.ReadLine();
+        string subject = Console.ReadLine() ?? "SubjectName";
         Console.Write("Enter grade:");
-        float grade = float.Parse(Console.ReadLine());
+        float grade = float.Parse(Console.ReadLine() ?? "0");
+
         if(grade < 0 || grade > 100){
             Console.WriteLine("Invalid grade. Please enter a grade between 0 and 100.");
             continue;
@@ -78,6 +81,7 @@ Dictionary<string, float> subjectValue(int size)
         subjectDict.Add(subject, grade);
         indx ++;
     }
+
     return subjectDict;
 }
 
