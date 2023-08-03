@@ -39,12 +39,21 @@
     public void PrintBooks()
     {
         Console.WriteLine("Books in library:");
-        foreach (Book book in Books)
+        if (Books.Count == 0)
         {
-            Console.WriteLine(book.getTitle());
-            Console.WriteLine(book.getAuthor());
-            Console.WriteLine(book.getISBN());
-            Console.WriteLine(book.getPublicationYear());
+            Console.WriteLine("No books in library");
+        }else{
+            int count = 1;
+            foreach (Book book in Books)
+            {   
+                Console.WriteLine($"Book {count} ");
+                Console.WriteLine($"               Book Title: {book.getTitle()}");
+                Console.WriteLine($"               Book Author: {book.getAuthor()}");
+                Console.WriteLine($"               Book ISBN: {book.getISBN()}");
+                Console.WriteLine($"               Book Publication Year:{book.getPublicationYear()}");
+                count += 1;
+            }
+
         }
 
         Console.WriteLine(" ");
@@ -54,11 +63,22 @@
     public void PrintMediaItems()
     {
         Console.WriteLine("Media items in library:");
-        foreach (MediaItem mediaItem in MediaItems)
+
+        if (MediaItems.Count == 0)
         {
-            Console.WriteLine(mediaItem.getTitle());
-            Console.WriteLine(mediaItem.getMediaType());
-            Console.WriteLine(mediaItem.getDuration());
+            Console.WriteLine("No media items in library");
+        }else{
+            int mediaCount = 1;
+            foreach (MediaItem mediaItem in MediaItems)
+            {
+                
+                Console.WriteLine($"MediaItem {mediaCount}");
+                Console.WriteLine($"              MediaItem Title: {mediaItem.getTitle()}");
+                Console.WriteLine($"              MediaItem Type: {mediaItem.getMediaType()}");
+                Console.WriteLine($"              MediaItem Duration: {mediaItem.getDuration()}");
+                mediaCount += 1;
+            }
+
         }
     }
 
@@ -82,17 +102,17 @@ public class Book{
 
     public string getTitle()
     {
-        return Title;
+        return Title??"";
     }
 
     public string getAuthor()
     {
-        return Author;
+        return Author??"";
     }
 
     public string getISBN()
     {
-        return ISBN;
+        return ISBN??"";
     }
 
     public int getPublicationYear()
@@ -130,12 +150,12 @@ public class MediaItem{
 
     public string getTitle()
     {
-        return Title;
+        return Title??"";
     }
 
     public string getMediaType()
     {
-        return MediaType;
+        return MediaType??"";
     }
 
     public int getDuration()
@@ -166,7 +186,7 @@ public class LibraryCatelog
         Console.WriteLine("5. Print Catalog");
         Console.WriteLine("6. Exit");
 
-        string input = Console.ReadLine();
+        string input = Console.ReadLine()??"";
 
         switch (input)
         {
@@ -224,11 +244,11 @@ public class LibraryCatelog
         }
         
         Console.WriteLine("Enter the publication year of the book: ");
-        int publicationYear = int.Parse(Console.ReadLine());
+        int publicationYear = int.Parse(Console.ReadLine()?? "");
 
-        while (publicationYear == 0  || string.IsInterned(publicationYear))
+        while (publicationYear == 0 || publicationYear > DateTime.Now.Year)
         {
-            Console.WriteLine("ISBN cannot be null and cannot be a number");
+            Console.WriteLine("publicationYear cannot be null and cannot be a number");
             publicationYear = int.Parse(Console.ReadLine()?? "");
         }
 
@@ -240,11 +260,27 @@ public class LibraryCatelog
     public static MediaItem addMediaItem()
     {
         Console.WriteLine("Enter the title of the media item: ");
-        string title = Console.ReadLine()?? "MediaTitle";
+        string title = Console.ReadLine()?? "";
+        while (title == "" || int.TryParse(title, out int n))
+        {
+            Console.WriteLine("Title cannot be null and cannot be a number");
+            title = Console.ReadLine()?? "";
+        }
+
         Console.WriteLine("Enter the media type of the media item: ");
-        string mediaType = Console.ReadLine()??"MediaType";
+        string mediaType = Console.ReadLine()??"";
+        while (mediaType == "" || int.TryParse(mediaType, out int n))
+        {
+            Console.WriteLine("Media type cannot be null and cannot be a number");
+            mediaType = Console.ReadLine()?? "";
+        }
         Console.WriteLine("Enter the duration of the media item: ");
-        int duration = int.Parse(Console.ReadLine()?? "0");
+        int duration = int.Parse(Console.ReadLine()??"");
+        while (duration == 0)
+        {
+            Console.WriteLine("Duration cannot be null and cannot be a number");
+            duration = int.Parse(Console.ReadLine()?? "");
+        }
 
         MediaItem mediaItem = new MediaItem(title, mediaType, duration);
 
