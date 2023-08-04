@@ -16,7 +16,7 @@ public enum TaskCategory
     Family
 }
 
-
+// public enum
 // TaskItem class to store information about a task
 // Name, Description, Category, IsCompleted
 public class TaskItem
@@ -27,12 +27,14 @@ public class TaskItem
     public bool IsCompleted { get; set; }
 }
 
-// TaskManager class to manage tasks in a list and save/load tasks from a CSV file 
-// AddTaskAsync() - Add a new task to the list
-// ViewTasks() - Display all tasks in the list
-// SaveTasksToCsvAsync() - Save all tasks in the list to a CSV file
-// LoadTasksFromCsvAsync() - Load all tasks from a CSV file into the list
-// StartAsync() - Display the main menu and handle user input 
+/*
+TaskManager class to manage tasks in a list and save/load tasks from a CSV file 
+AddTaskAsync() - Add a new task to the list
+ViewTasks() - Display all tasks in the list
+SaveTasksToCsvAsync() - Save all tasks in the list to a CSV file
+LoadTasksFromCsvAsync() - Load all tasks from a CSV file into the list
+StartAsync() - Display the main menu and handle user input 
+*/
 
 public class TaskManager
 {
@@ -44,12 +46,14 @@ public class TaskManager
     public async Task StartAsync()
     {
         await LoadTasksFromCsvAsync();
+
         while (true)
         {
             Console.WriteLine("\n==== Simple Task Manager ====");
             Console.WriteLine("1. Add Task");
-            Console.WriteLine("2. View Tasks");
-            Console.WriteLine("3. Exit");
+            Console.WriteLine("2. View All Tasks");
+            Console.WriteLine("3. View Tasks by Category");
+            Console.WriteLine("4. Exit");
             Console.Write("Choose an option: ");
             string input = Console.ReadLine();
 
@@ -62,6 +66,9 @@ public class TaskManager
                     ViewTasks();
                     break;
                 case "3":
+                    ViewTasksByCategory();
+                    break;
+                case "4":
                     await SaveTasksToCsvAsync();
                     return;
                 default:
@@ -70,6 +77,37 @@ public class TaskManager
             }
         }
     }
+
+    // Display tasks based on category
+    public void ViewTasksByCategory()
+    {
+        Console.WriteLine("Select Task Category:");
+        for (int i = 0; i < Enum.GetNames(typeof(TaskCategory)).Length; i++)
+        {
+            Console.WriteLine($"{i + 1}. {Enum.GetNames(typeof(TaskCategory))[i]}");
+        }
+
+        int categoryIndex;
+        while (!int.TryParse(Console.ReadLine(), out categoryIndex) || categoryIndex < 1 || categoryIndex > Enum.GetNames(typeof(TaskCategory)).Length)
+        {
+            Console.WriteLine("Invalid category. Try again.");
+        }
+
+        TaskCategory selectedCategory = (TaskCategory)(categoryIndex - 1);
+        
+        // lambda expression to find all tasks in the list that match the selected category
+        List<TaskItem> tasksInCategory = tasks.FindAll(task => task.Category == selectedCategory);
+
+        Console.WriteLine($"\n==== Tasks in Category: {selectedCategory} ====");
+        foreach (TaskItem task in tasksInCategory)
+        {
+                Console.WriteLine($"Name: {task.Name}");
+                Console.WriteLine($"Description: {task.Description}");
+                Console.WriteLine($"Category: {task.Category}");
+                Console.WriteLine($"Completed: {(task.IsCompleted ? "Yes" : "No")}\n");
+        }
+    }
+
     
     // Load tasks from a CSV file into the list 
     public async Task LoadTasksFromCsvAsync()
@@ -163,28 +201,7 @@ public class TaskManager
         }
 
         TaskCategory category = (TaskCategory)(categoryIndex);
-        // for (int i = 0; i < Enum.GetNames(typeof(TaskCategory)).Length; i++)
-        // {
-        //     Console.WriteLine($"{i + 1}. {Enum.GetNames(typeof(TaskCategory))[i]}");
-        // }
-
-        // int categoryIndex;
-
-        // // handdle int input error with try and catch
-        // try
-        // {
-        //     categoryIndex = int.Parse(Console.ReadLine()) - 1;
-        // }
-        // catch (Exception ex)
-        // {
-        //     Console.WriteLine("Invalid category. Try again.");
-        //     categoryIndex = int.Parse(Console.ReadLine()) - 1;
-        // }
-        
-
-        
-
-        // TaskCategory category = (TaskCategory)categoryIndex;
+      
 
         TaskItem task = new TaskItem
         {
