@@ -1,0 +1,15 @@
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/bin/Debug/net7.0/TaskManager
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/bin/Debug/net7.0/TaskManager.deps.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/bin/Debug/net7.0/TaskManager.runtimeconfig.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/bin/Debug/net7.0/TaskManager.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/bin/Debug/net7.0/TaskManager.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.csproj.AssemblyReference.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.AssemblyInfoInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.AssemblyInfo.cs
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.csproj.CoreCompileInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/refint/TaskManager.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/TaskManager.genruntimeconfig.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/TaskManager/obj/Debug/net7.0/ref/TaskManager.dll
