@@ -1,0 +1,15 @@
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/bin/Debug/net7.0/palindrome
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/bin/Debug/net7.0/palindrome.deps.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/bin/Debug/net7.0/palindrome.runtimeconfig.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/bin/Debug/net7.0/palindrome.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/bin/Debug/net7.0/palindrome.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.csproj.AssemblyReference.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.GeneratedMSBuildEditorConfig.editorconfig
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.AssemblyInfoInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.AssemblyInfo.cs
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.csproj.CoreCompileInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/refint/palindrome.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/palindrome.genruntimeconfig.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/palindrome/obj/Debug/net7.0/ref/palindrome.dll

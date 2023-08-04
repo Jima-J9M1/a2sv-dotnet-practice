@@ -77,8 +77,8 @@ public class Program
 
     public static void Main()
     {
-        Circle circle = new Circle("circle",5);
-        Rectangle rectangle = new Rectangle("rectangle",4, 6);
+        Circle circle = new Circle("circle", 5);
+        Rectangle rectangle = new Rectangle("rectangle",4,  6);
         Triangle triangle = new Triangle("triangle", 4, 6);
 
         PrintShapeArea(circle); // Output: Shape: Circle, Area: 78.53981633974483

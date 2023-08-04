@@ -38,6 +38,7 @@ void addStudentData()
 
 
 void printStudentData(string name, Dictionary<string, float> subjectDict,float avg){
+
     Console.WriteLine("-------------------------");
     Console.WriteLine("Student name: {0}", name);
     // Console.WriteLine($"Student name: {name}");
@@ -47,7 +48,7 @@ void printStudentData(string name, Dictionary<string, float> subjectDict,float a
 
 
     foreach(KeyValuePair<string, float> grade in subjectDict){
-        Console.WriteLine("Subject: {9}, Grade: {1}", grade.Key, grade.Value);
+        Console.WriteLine("Subject: {0}, Grade: {1}", grade.Key, grade.Value);
     }
 
     Console.WriteLine("Average grade: {0}", avg);
