@@ -1,0 +1,15 @@
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.csproj.AssemblyReference.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.GeneratedMSBuildEditorConfig.editorconfig
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.AssemblyInfoInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.AssemblyInfo.cs
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.csproj.CoreCompileInputs.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/bin/Debug/net7.0/StudentMangementSystem
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/bin/Debug/net7.0/StudentMangementSystem.deps.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/bin/Debug/net7.0/StudentMangementSystem.runtimeconfig.json
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/bin/Debug/net7.0/StudentMangementSystem.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/bin/Debug/net7.0/StudentMangementSystem.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/refint/StudentMangementSystem.dll
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.pdb
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/StudentMangementSystem.genruntimeconfig.cache
+/home/jimd/Desktop/Projects/a2sv-dotnet-practice/StudentMangementSystem/obj/Debug/net7.0/ref/StudentMangementSystem.dll
