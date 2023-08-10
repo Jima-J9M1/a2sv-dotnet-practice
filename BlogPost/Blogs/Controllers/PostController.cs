@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Blog.Models;
 using Blog.Data;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace Blog.Controllers;
@@ -25,13 +20,24 @@ namespace Blog.Controllers;
         public ActionResult<IEnumerable<Post>> GetPosts() //
         {
             var posts = _context.Posts.ToList();
+            if(posts == null)
+            {
+                return NotFound();
+            }
+
             foreach(var post in posts)
             {
-                var comment = _context.Comments.Where(c => c.postId == post.id).ToList();
+                var comment = _context?.Comments.Where(c => c.postId == post.id).ToList();
                 // remove post from the comment
+                if(comment == null)
+                {
+                    return NotFound();
+                }
                 foreach(var c in comment)
                 {
-                    c.Post = null;
+                 if(c.Post != null) {
+                        c.Post = null;
+                    };
                 }
                 post.Comments = comment;
 
@@ -48,7 +54,9 @@ namespace Blog.Controllers;
             // remove post from the comment
             foreach(var c in comment)
             {
-                c.Post = null;
+                if(c.Post != null) {
+                        c.Post = null;
+                    };
             }
             post.Comments = comment.ToList();
             if(post == null)
@@ -67,25 +75,26 @@ namespace Blog.Controllers;
              
             _context.Posts.Add(post);
             _context.SaveChanges();
-            // use ok instead of created at action
+            // what is createdAtAction doing?
             return CreatedAtAction(nameof(GetPost), new {id = post.id}, post);
         }
+
+
+
 
         [HttpPut("{id}")]
         public IActionResult UpdatePost(int id, Post post)
         {
-            // use try catch 
-            try
+            var existingPost = _context.Posts.Find(id);
+            if(existingPost == null)
             {
-            _context.Entry(post).State = EntityState.Modified;
+                return NotFound();
+            }
+            existingPost.title = post.title;
+            existingPost.content = post.content;
+            _context.Posts.Update(existingPost);
             _context.SaveChanges();
-            return NoContent();
-            }
-            catch (System.Exception ex)
-            {
-                return BadRequest(ex.Message);
-                 // TODO
-            }
+            return Ok("Updated Successfully");
         }
 
         [HttpDelete("{id}")]

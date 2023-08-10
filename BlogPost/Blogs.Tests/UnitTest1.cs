@@ -1,16 +1,8 @@
-using System.Runtime.Intrinsics.X86;
-using System.Reflection.Metadata.Ecma335;
-using Xunit;
-using System.Runtime.InteropServices;
-using System.Reflection;
 using Blog.Controllers;
 using Blog.Data;
 using Blog.Models;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.InMemory;
 
 namespace FirstProject.Test;
 
@@ -19,10 +11,12 @@ public class UnitTest1
 {
 
     //  Test for GetPosts method in PostController class
+
+
     [Fact]
     public void GetPostResultOk()
     {
-        var options = new DbContextOptionsBuilder<ApiDbContext>()
+      var options = new DbContextOptionsBuilder<ApiDbContext>()
       .UseInMemoryDatabase(databaseName: "Blog")
       .Options;
 
@@ -53,10 +47,10 @@ public class UnitTest1
 
       var result = controller.CreatePost(post_value);
       var createdAtResult = result.Result as CreatedAtActionResult;
-      var post_res = createdAtResult.Value as Post;
+      var post_res = createdAtResult?.Value as Post;
       // var result = controller.GetPosts();
-      Assert.Equal("test", post_res.title);
-      Assert.Equal("test", post_res.content);
+      Assert.Equal("test", post_res?.title);
+      Assert.Equal("test", post_res?.content);
 
     }
 
@@ -78,16 +72,20 @@ public class UnitTest1
 
       var result = controller.CreateComment(comment_value);
       var createdAtResult = result.Result as CreatedAtActionResult;
-      var comment_res = createdAtResult.Value as Comment;
+      var comment_res = createdAtResult?.Value as Comment;
       // var result = controller.GetPosts();
-      Assert.Equal("test", comment_res.text);
-      Assert.Equal(1, comment_res.postId);
+      Assert.Equal("test", comment_res?.text);
+      Assert.Equal(1, comment_res?.postId);
 
     }
 
 
+
+    // create assync function for get all  comments
+
+
     [Fact]
-    public void GetComemntResultOk()
+    public void GetCommentResultOk()
     {
         var options = new DbContextOptionsBuilder<ApiDbContext>()
       .UseInMemoryDatabase(databaseName: "Blog")
@@ -101,6 +99,27 @@ public class UnitTest1
       Assert.IsType<OkObjectResult>(result.Result);
 
     }
+
+    [Fact]
+    public void UpdatePost()
+    {
+      var options = new DbContextOptionsBuilder<ApiDbContext>()
+      .UseInMemoryDatabase(databaseName: "Blog")
+      .Options;
+
+      var context = new ApiDbContext(options);
+
+      var controller = new PostController(context);
+
+      var post_value = new Post {id = 2, title = "test", content = "test", Comments = {}};
+
+      var result = controller.UpdatePost(2, post_value);
+
+      var return_val = Assert.IsType<OkObjectResult>(result);
+      Assert.Equal("Updated Successfully",return_val.Value);
+    }
+
+
 
 
 

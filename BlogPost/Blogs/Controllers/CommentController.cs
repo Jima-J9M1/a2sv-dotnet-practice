@@ -24,45 +24,55 @@ namespace Blog.Controllers;
         [HttpGet]
         // async function for get all comments
         
-        public async Task<ActionResult<IEnumerable<Comment>>> GetComments() //
+        public  ActionResult<IEnumerable<Comment>> GetComments() //
         {
 
-            var comments = await _context.Comments.ToListAsync();
-            try
+            var comments = _context.Comments.ToList();
+            if(comments == null)
             {
+                return NotFound();
+            }
+
             foreach(var comment in comments)
             {
-                var post = _context.Posts.Find(comment.postId);
-                post.Comments = null;
-                comment.Post = post;
+
+            var post = _context.Posts.Find(comment.postId);
+            // var post = post1;
+                 //Deferrence of a possibly null reference
+                if(post?.Comments != null) {
+                        post.Comments = null;
+                    };
+
+                comment.Post = post?? throw new ArgumentNullException(nameof(post));
             }
+
+            // assync ok
+            // return IAsyncResult(comments);
             return Ok(comments);
-            }
-            catch (Exception ex)
-            {
-             return NotFound();
-            }
+
             
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Comment>> GetComment(int id)
+        public ActionResult<Comment> GetComment(int id)
         {
-            var comment = _context.Comments.Find(id);
-            var post = _context.Posts.Find(comment.postId);
             // error handling 
-            try{
-              post.Comments = null;   
+            var comment = _context.Comments.Find(id);
+            var post = _context.Posts.Find(comment?.postId);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+
+        
+            if(post.Comments != null) {
+                        post.Comments = null;
+                    }; 
 
             comment.Post = post;
 
             return Ok(comment);
 
-
-            }catch(Exception ex)
-            {
-              return NotFound();
-            }
             
         }
 
@@ -75,40 +85,37 @@ namespace Blog.Controllers;
             return CreatedAtAction(nameof(GetComment), new {id = comment.id}, comment);
         }
 
+
         [HttpPut("{id}")]
         public IActionResult UpdateComment(int id, Comment comment)
         {
-            if(id != comment.id)
+            var existingComment = _context.Comments.Find(id);
+            if(existingComment == null)
             {
-                return BadRequest();
+                return NotFound();
             }
-
-            _context.Entry(comment).State = EntityState.Modified;
+            existingComment.text = comment.text;
+            _context.Comments.Update(existingComment);
             _context.SaveChanges();
-            return NoContent();
+
+            return Ok("updated successfully");
         }
 
         [HttpDelete("{id}")]
          //async function for delete comment
-        public async Task<IActionResult> DeleteComment(int id)
-        {
-            var comment = _context.Comments.Find(id);
+        public ActionResult DeleteComment(int id )
+        { 
 
-            try
+        try
             {
+            var comment = _context.Comments.Find(id);
             _context.Comments.Remove(comment);
             _context.SaveChanges();
             return NoContent();
             }
             catch (Exception ex)
             {
-                 return NotFound();
+                 return NotFound(ex.Message);
             }
-            if(comment == null)
-            {
-                
-            }
-
-
         }
     }
